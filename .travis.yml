@@ -1,0 +1,36 @@
+language: ruby
+rvm:
+- 2.4.1
+branches:
+  only:
+  - master
+env:
+  global:
+  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+  - secure: wBd3WXfGneI3W/QBeAYdN7W5FFSmcsdxnkAcdZBG1r3cM3VYOZ6STA/1Z+mXhnmXOdbl3ErOHXZtaBW3tkMgxI2HgsdxpENBShGhxO8sSPr3uAmHzlieZ0JSamPGWQIo5GlN30m2uYvLqU0ZUnlwv08IRQTztAOO1TzunURIHBhd5vpsvCQLFGv2KAP7gkRuQR5gHtuvM7CG02OwmwSufd+JEdJZGN8zHYtL/bxdjFtqmajJP5yCBFhEJwXP7I6wBwSd5at6E9EB82GGFm8n95bgq35zT0eIPrjy48B/g9LNIBESbUkJIXE9AmACijsANbBjeG5FNhP9VFtEBdFXlBanCHwxGEW2vg7hDOIpZqlP5l0jyMzZJGIfjOrdL5D/Qf+mBOIfF4GuJ6+uYKmYTWSCM0p1QfT6hRhnA5/UI6HIubPWns2NLzs/6e2rTiwRhGjGYCrSZxslH9ussuZIgvZrMaUwI+YvxXym2/gQ3rvsv8zDJHSQbJ12k6r1AJRg8hFhahgOemyGL8zTrX9SpZeaanQZnmoc1ryCMLUxwWMSkTjXREVJPct5fXuliiovdOBW7mVEtej7KB3KFqBAGFR+8ClMlrZveGrN9nkTsapR1TJAmPUYfTXymkKOB/07bAuWGTqQStVBdyTZ5aFiQci3nrvCGBnHR8di9tgt73k=
+  - secure: jY2dhSyzKGlMXzWd+E3g8d67+qzeXI7yKDsFQdjY23Dtx29SGJxUOBc7tV3Hp4aDgo3rOqUJ4OKnLB0ZphjTs64kYojzx9d0G45xUftxZVfZxNDCWiMS4Ch/5vyRW+PdgUQhjdMMzHvZfwbrC9XdDFqkZTGF5l+1GzUGs0DuIZg83WbB1ErHU8dHgHPy1KJPk0joxXR6DJ2JNzkD7bw35BiQaCicLXL01cxVAJwfPRWRK8Q9P21PHN0uyIxJxRHESZtUnIqOwbPFgVc7VqQviOKQwzREoZKiENJRd9gGgLYqM0A8kBdMIhCQYeBtcSnTwBXCgSxzH3ydspr6A11CGypQs+B06bl9YrJWsxKBRMVAY2t5eV1SpMXOiCDHHn4kv3DD9QoTXwmJ3G3vCTkCAwympT9OcrMnZwpg5WQsCnsQBXE8axryOflLk+9N+9H3S2vGYt4pHOXQ2MtLqx8P1fcRgeTaf81v0H4ykuRBVP9mrql2JYtwQV7VXMI0wvxQ+3EXlQoCcnnudCi/prtjcA9uW+1wstz0i2qroRkwLHV4QMDxq2iLOApQ+rqG62UYZASYhJpzgigtt5VWI0pntupWxGeIAiuILb1Z0qxyfCO+ySmYJAE0746X58Atmj0BmfkedVTxEzkJQockkRy5bIqraehCXgQbD6FVy/Djffc=
+  - secure: SLixzSacf8LjmKYrC5+yV7tUP08fNysP3G20xVX2g1BSnRPz3nAaDR16YbOS2/XdDVszqFKI+OBmnOQcV9mg0l0cLHbq8GYDOJxNza+ObTvsWHbN0I1/aYIA9VrRc8D9wWzXfNA0ClW1uxAu6X9RnHp1ZssAoK5GoLH/wk8mxJC56+XSQV+CCHUIT201bXvp6ksyvp3bn2SW+t+vZpVPBh4ldyjZQgGukHAu8KrsD8pH+Rjc7mMdKLaKtjiM7aowz9Do3Nj7zkl0n6HXvZNzFlAIjnMWZRwZkyNo7vDnLzKa4BprSrVIcxMLDshZoUoBUbRBQaeXrSHpvDzUXtDdMux6pzIWxMWVXm3i/E6XAYtf4ReIpXhRV+23KWDPF7EAEObvmR7ROHXoPVm4X3jd4yPSSzoIE897wYodYQ0gRWmZgl63pqR7tPFnTNqCAkIOsqSXuC35YBd76I1qgm9I2aC8xyhXKGWKyPhvZDylj6PsXxETqGNhGFrqfPoJwmj075NM0YEOsghBCQo0VAfOmaAiczVgPBXFscffav4rWZZFHsk/4JLV3Y/Lfuq1L+R7AmGEzIhD1EeeYHz+p4SuKs5B29UUyCBY/BdP++/e9VfY6pjiG7P75A+wMWvTJyGd1o9Yd36AKz4dHWhc+ZFUaR9Er+b525MSxZAUskv8Yck=
+addons:
+  apt:
+    packages:
+    - libcurl4-openssl-dev
+sudo: false
+cache: bundler
+notifications:
+  email: false
+script:
+- bundle exec jekyll build
+- bundle exec rake test
+before_deploy:
+- openssl aes-256-cbc -K $encrypted_4208158246d9_key -iv $encrypted_4208158246d9_iv
+  -in deploy_rsa.enc -out /tmp/deploy_rsa -d
+- eval "$(ssh-agent -s)"
+- chmod 600 /tmp/deploy_rsa
+- ssh-add /tmp/deploy_rsa
+- echo -e "Host $DEPLOY_HOST\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+deploy:
+  provider: script
+  skip_cleanup: true
+  script: rsync -r --quiet --delete-after _site/* $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_DIRECTORY
+  on:
+    branch: master
