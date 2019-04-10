@@ -2,3 +2,94 @@
 ---
 
 @import 'bootstrap/bootstrap';
+
+$wise-blue: #4a5079;
+$wise-blue-highlight: #4bc9f3;
+
+a {
+  color: #3fa9cc;
+}
+
+.blue-border {
+  background-color: $wise-blue;
+  height: 8px;
+  width: 100%;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  line-height: 1.43;
+  letter-spacing: 0.1px;
+  color: #222222;
+}
+
+#navbar-container {
+  @include media-breakpoint-down(sm) {
+    max-width: initial;
+    margin-bottom: 33px;
+  }
+  background-color: white;
+}
+
+@include media-breakpoint-down(sm) {
+  #nav-toggle-container {
+    background-color: $wise-blue !important;
+  }
+  #navbar-container {
+    padding: 0;
+    border-bottom: 1px solid $wise-blue;
+  }
+  .navbar-nav {
+    text-align:center;
+  }
+  .nav-item {
+    margin: 0.75rem 0;
+    font-size: 16px;
+  }
+}
+
+.navbar {
+  padding-left: 0;
+  padding-right: 0;
+  @include media-breakpoint-down(sm) {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .navbar-nav {
+    font-size: 12px;
+    letter-spacing: 0.1px;
+    color: #777777;
+    text-transform: uppercase;
+    @include media-breakpoint-up(md) {
+      .nav-item {
+        margin: 0.75rem 0 0.75rem 1rem;
+        a {
+          padding: 0.5rem 0 !important;
+          border-bottom: 8px solid white;
+        }
+        a:hover {
+          border-bottom: 8px solid $wise-blue-highlight;
+        }
+      }
+    }
+  }
+}
+
+.navbar-light .navbar-toggler {
+  border: none !important;
+  outline: none;
+}
+.navbar-light .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(75, 201, 243, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+#header-logo {
+  margin-top: 5px;
+  margin-bottom: 24px;
+  @include media-breakpoint-up(md) {
+    a {
+      margin-left:-53px;
+    }
+  }
+}
