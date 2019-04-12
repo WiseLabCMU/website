@@ -120,8 +120,12 @@ h2 {
   }
 }
 
-.boxed {
+.blue-top {
   border-top: 8px solid $wise-blue;
+}
+
+.boxed {
+  @extend .blue-top;
   &:hover {
     border-top: 8px solid $wise-blue-highlight;
   }
@@ -142,6 +146,12 @@ h2 {
   }
   &:hover {
     color: $body-black;
+  }
+}
+
+.project-image-large {
+  img {
+    width: 100%;
   }
 }
 
