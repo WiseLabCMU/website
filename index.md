@@ -65,7 +65,7 @@ title: Home
         <div class="col-md">
             <div class="project-item boxed">
                 <a href="">
-                    <img src="/img/projects/acoustic.png"/>
+                    <img src="/img/projects/acoustic.jpg"/>
                     <div class="project-title">
                         Active Acoustic Sensing
                     </div>
