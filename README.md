@@ -18,7 +18,8 @@ Specify the following metatags in header:
 * `image:` "/img/projects/[filename]"
 * `priority:` [int]
 
-The body is markdown-enabled description of the project.
+The body is markdown-enabled description of the project.  
+Images should be 3:2 ratio, ideally 510px * 340px.
 
 ### Team Members
 Add team members to the `_team` directory.
@@ -32,4 +33,5 @@ Specify the following metatags in header:
 * `website:` [url]
 * `image:` "/img/team/[filename]"
 
+Images should be square, ideally 450px * 450px.  
 Team member display is sorted first by priority, then by last name.
