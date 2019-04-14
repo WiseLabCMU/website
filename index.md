@@ -22,7 +22,7 @@ title: Home
         <div class="col-md-4">
             <div class="project-item boxed">
                 <a href="{{ base.url }}{{ project.url }}">
-                    <img src="{{ project.image }}"/>
+                    <img alt="{{ project.title }} image" src="{{ project.image }}"/>
                     <div class="project-title">
                         {{ project.title }}
                     </div>

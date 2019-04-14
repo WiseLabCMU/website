@@ -21,10 +21,10 @@
         </div>
     </div>
     <div class="row pb-5">
-        <div class="col-md-9 project-image-large">
-            <img src="{{page.image}}"/>
+        <div class="col-md-8 project-image-large">
+            <img alt="{{ page.title }} image" src="{{page.image}}"/>
         </div>
-        <div class="col-md-3 pt-5">
+        <div class="col-md-4 pt-4">
             <h2>{{ page.title }}</h2>
             {{ content }}
         </div>
@@ -35,7 +35,7 @@
             <div class="col-md-4">
                 <div class="project-item boxed">
                     <a href="{{ base.url }}{{ project.url }}">
-                        <img src="{{ project.image }}"/>
+                        <img alt="{{ project.title }} image" src="{{ project.image }}"/>
                         <div class="project-title">
                             {{ project.title }}
                         </div>
