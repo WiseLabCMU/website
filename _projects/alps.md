@@ -2,6 +2,7 @@
 layout: project
 title:  "ALPS: Indoor Ranging for Mobile Devices"
 image: "/img/projects/alps.jpg"
+priority: 7
 ---
 ALPs is an indoor ultrasonic ranging technique that can be used to localize modern mobile 
 devices like smartphones and tablets. The method uses a communication scheme in the audio 

@@ -5,6 +5,7 @@
 </head>
 <body>
 {% include header.html %}
+{% assign projects = site.projects | sort: 'priority' %}
 <div class="container">
     <div class="row mb-2">
         <div class="col">
@@ -19,7 +20,7 @@
             <div class="blue-border"></div>
         </div>
     </div>
-    <div class="row mb-5">
+    <div class="row pb-5">
         <div class="col-md-9 project-image-large">
             <img src="{{page.image}}"/>
         </div>
@@ -28,9 +29,22 @@
             {{ content }}
         </div>
     </div>
-</div>
-
-<div class="container">
+    <div class="row my-5">
+        {% for project in projects %}
+            {% if project != page %}
+            <div class="col-md-4">
+                <div class="project-item boxed">
+                    <a href="{{ base.url }}{{ project.url }}">
+                        <img src="{{ project.image }}"/>
+                        <div class="project-title">
+                            {{ project.title }}
+                        </div>
+                    </a>
+                </div>
+            </div>
+            {% endif %}
+        {% endfor %}
+    </div>
     <div class="row">
         <div class="col" id="news-container">
         {% capture news_include %}{% include news.md %}{% endcapture %}

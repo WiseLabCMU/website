@@ -2,6 +2,7 @@
 layout: project
 title:  "Persistent and Collaborative Augmented Reality"
 image: "/img/projects/ar.jpg"
+priority: 1
 ---
 Current state-of-the-art AR and VR systems show tremendous promise in applications 
 ranging from entertainment and telerobotics, to pervasive computing and telepresence. 

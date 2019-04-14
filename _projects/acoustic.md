@@ -2,6 +2,7 @@
 layout: project
 title:  "Active Acoustic Sensing"
 image: "/img/projects/acoustic.jpg"
+priority: 5
 ---
 In this project we are designing a platform for low-power real-time sensing of the shape and 
 number of occupants in indoor spaces. The system transmits a wide-band ultrasonic signal into 
