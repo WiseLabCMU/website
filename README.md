@@ -8,6 +8,28 @@ with `jekyll serve` at http://localhost:4000
 ## Making Updates
 Modify content pages and push commit. Changes to `master` branch will automatically
 be deployed to the live server unless a `skip` keyword is included in commit message, e.g. 
-```
-[skip travis] Update README
-```
+`[skip travis] Update README`
+### Projects
+Add projects to the `_projects` directory.
+
+Specify the following metatags in header:
+* `layout: project`
+* `title:` [title]
+* `image:` "/img/projects/[filename]"
+* `priority:` [int]
+
+The body is markdown-enabled description of the project.
+
+### Team Members
+Add team members to the `_team` directory.
+
+Specify the following metatags in header:
+* `firstname:` [firstname]
+* `lastname:` [lastname]
+* `priority:` [int]
+* `title:` [title]
+* `affiliation:` [department/school]
+* `website:` [url]
+* `image:` "/img/team/[filename]"
+
+Team member display is sorted first by priority, then by last name.
