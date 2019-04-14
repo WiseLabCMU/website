@@ -2,7 +2,6 @@
 title: Home
 ---
 
-
 <div class="container">
     <div class="row  mb-4">
         <div class="col">
@@ -18,18 +17,19 @@ title: Home
         </div>
     </div>
     <div class="row mb-5">
-        {% for project in site.projects %}
-            <div class="col-md-4">
-                <div class="project-item boxed">
-                    <a href="{{ base.url }}{{ project.url }}">
-                        <img src="{{ project.image }}"/>
-                        <div class="project-title">
-                            {{ project.title }}
-                        </div>
-                    </a>
-                </div>
+    {% assign projects = site.projects | sort: 'priority' %}
+    {% for project in projects %}
+        <div class="col-md-4">
+            <div class="project-item boxed">
+                <a href="{{ base.url }}{{ project.url }}">
+                    <img src="{{ project.image }}"/>
+                    <div class="project-title">
+                        {{ project.title }}
+                    </div>
+                </a>
             </div>
-        {% endfor %}
+        </div>
+    {% endfor %}
     </div>
     <div class="row">
         <div class="col" markdown="1" id="news-container">{% include news.md %}

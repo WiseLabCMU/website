@@ -109,15 +109,13 @@ h2 {
   }
 }
 
-@include media-breakpoint-up(md) {
-  .margin-middle {
-    .col-md:first-child {
-      padding-left: 0;
-    }
-    .col-md:last-child {
-      padding-right: 0;
-    }
+footer {
+  @include media-breakpoint-down(sm) {
+    padding-top: 20px;
+    border-top: 1px solid $wise-blue;
+    margin-top: 30px;
   }
+  margin-top: 100px;
 }
 
 .blue-top {
@@ -171,11 +169,32 @@ h2 {
   }
 }
 
-footer {
-  @include media-breakpoint-down(sm) {
-    padding-top: 20px;
-    border-top: 1px solid $wise-blue;
-    margin-top: 30px;
+.sponsor-list {
+  @extend .list-unstyled;
+  li {
+    @extend .col-md-2;
+    @extend .col-sm-3;
+    @extend .col-6;
+    @extend .mb-4;
   }
-  margin-top: 100px;
+  img {
+    width: 100%
+  }
+  @extend .mb-0;
+}
+
+.team-list {
+  &>div {
+    @extend .col-lg-3;
+    @extend .col-md-4;
+    @extend .col-sm-6;
+  }
+  .team-item {
+    @extend .blue-top;
+    @extend .mb-4;
+  }
+  img {
+    width: 100%;
+    @extend .pb-2;
+  }
 }
