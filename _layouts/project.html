@@ -7,12 +7,20 @@
 {% include header.html %}
 {% assign projects = site.projects | sort: 'priority' %}
 <div class="container">
-    <div class="row mb-2">
-        <div class="col">
+    <div class="d-none d-md-flex mb-2 justify-content-between">
+        <div>
             Projects / {{ page.title }}
         </div>
-        <div class="col">
-
+        <div>
+            {% assign count = 0 %}
+            {% for project in projects %}
+                {% if project == page %}
+                    {% assign prev = count | minus: 1 | modulo: projects.size  %}
+                    {% assign next = count | plus: 1  | modulo: projects.size %}
+                {% endif %}
+                {% assign count = count | plus: 1 %}
+            {% endfor %}
+            <a href="{{ projects[prev].url }}">Previous</a>  / <a href="{{ projects[next].url }}">Next</a>
         </div>
     </div>
     <div class="row">
@@ -29,7 +37,7 @@
             {{ content }}
         </div>
     </div>
-    <div class="row my-5">
+    <div class="row my-5 d-none d-md-flex">
         {% for project in projects %}
             {% if project != page %}
             <div class="col-md-4">
@@ -45,11 +53,20 @@
             {% endif %}
         {% endfor %}
     </div>
-    <div class="row">
+    <div class="row d-none d-md-block">
         <div class="col" id="news-container">
         {% capture news_include %}{% include news.md %}{% endcapture %}
         {{ news_include | markdownify }}
         </div>
+    </div>
+    <div class="d-md-none d-flex justify-content-between font-weight-bold">
+        <div>
+            <a href="{{ projects[prev].url }}">&larr; Previous</a> 
+        </div>
+        <div>
+            <a href="{{ projects[next].url }}">Next &rarr;</a>
+        </div>
+    
     </div>
 </div>
 {% include footer.html %}
