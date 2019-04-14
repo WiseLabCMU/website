@@ -39,7 +39,8 @@ defaults:
 collections:
   projects:
     output: true
-    permalink: /projects/:path/
+  team:
+    output: false
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

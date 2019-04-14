@@ -40,42 +40,21 @@ title: About
     </div>
     <h2>Team</h2>
     <div class="row team-list">
+        {% assign teamSorted = site.team |  sort: 'priority' %}
+        {% assign members = teamSorted |  sort: 'lastname' %}
+        {% for member in members %}
         <div class="border-container">
             <div class="team-item">
-                <img alt="Anthony Rowe" src="/img/team/anthony.jpg">
-                <strong>Anthony Rowe, Ph. D.</strong><br/>
-                Assistant Research Professor,<br/>
-                Electrical and Computer Engineering Department.<br/>
-                <a href="https://users.ece.cmu.edu/~agr/">Website</a>
+                <img alt="{{ member.firstname }} {{ member.lastname }}" src="{{ member.image }}">
+                <strong>{{ member.firstname }} {{ member.lastname }}</strong><br/>
+                {{ member.title }},<br/>
+                {{ member.affiliation }}<br/>
+                {% if member.website %}
+                    <a href="{{ member.website }}" target="blank">Website</a>
+                {% endif %}
             </div>
         </div>
-        <div class="border-container">
-            <div class="team-item">
-                <img alt="Anthony Rowe" src="/img/team/anthony.jpg">
-                <strong>Anthony Rowe, Ph. D.</strong><br/>
-                Assistant Research Professor,<br/>
-                Electrical and Computer Engineering Department.<br/>
-                <a href="https://users.ece.cmu.edu/~agr/">Website</a>
-            </div>
-        </div>
-        <div class="border-container">
-            <div class="team-item">
-                <img alt="Anthony Rowe" src="/img/team/anthony.jpg">
-                <strong>Anthony Rowe, Ph. D.</strong><br/>
-                Assistant Research Professor,<br/>
-                Electrical and Computer Engineering Department.<br/>
-                <a href="https://users.ece.cmu.edu/~agr/">Website</a>
-            </div>
-        </div>
-        <div class="border-container">
-            <div class="team-item">
-                <img alt="Anthony Rowe" src="/img/team/anthony.jpg">
-                <strong>Anthony Rowe, Ph. D.</strong><br/>
-                Assistant Research Professor,<br/>
-                Electrical and Computer Engineering Department.<br/>
-                <a href="https://users.ece.cmu.edu/~agr/">Website</a>
-            </div>
-        </div>
+        {% endfor %}
     </div>
 </div>
 
