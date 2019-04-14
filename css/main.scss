@@ -175,12 +175,12 @@ footer {
     @extend .col-md-2;
     @extend .col-sm-3;
     @extend .col-6;
-    @extend .mb-4;
+    margin-bottom: 1rem;
   }
   img {
     width: 100%
   }
-  @extend .mb-0;
+  margin-bottom: 0;
 }
 
 .team-list {
@@ -191,10 +191,25 @@ footer {
   }
   .team-item {
     @extend .blue-top;
-    @extend .mb-4;
+    margin-bottom: 1rem;
   }
   img {
     width: 100%;
-    @extend .pb-2;
+    margin-bottom: 0.5rem;
+  }
+}
+.year-row {
+  height: 40px;
+  padding: 10px 1rem;
+  color: white;
+  background-color: $wise-blue;
+  margin-bottom: 1rem;
+}
+
+.publist {
+  padding-left: 1rem;
+  li {
+    margin-bottom: 1rem;
+    padding-left: 1rem;
   }
 }
