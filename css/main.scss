@@ -128,13 +128,21 @@ footer {
   @extend .blue-top;
   &:hover {
     border-top: 8px solid $wise-blue-highlight;
+    img {
+      opacity: .5;
+    }
   }
+  -webkit-transition: opacity 500ms, border 500ms;
+  transition: opacity 500ms, border 500ms;
 }
 
 .project-item {
   img {
     width: 100%;
     margin-bottom: 8px;
+    opacity: 1;
+    -webkit-transition: opacity 500ms;
+    transition: opacity 500ms;
   }
   .project-title {
     font-weight: 600;
@@ -163,20 +171,18 @@ footer {
       min-height: 40px;
       padding: 10px;
       background-color: #f9f9f9;
-      font-weight: 600;
       &:nth-child(odd) {
         background-color: #f3f3f3;
+      }
+      br {
+        @extend .d-md-none;
       }
     }
   }
 }
 
 .sponsor-list {
-  @extend .list-unstyled;
   li {
-    @extend .col-md-2;
-    @extend .col-sm-3;
-    @extend .col-6;
     margin-bottom: 1rem;
   }
   img {
@@ -214,4 +220,5 @@ footer {
     margin-bottom: 1rem;
     padding-left: 1rem;
   }
+  margin-bottom: 2rem;
 }

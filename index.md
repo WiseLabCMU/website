@@ -17,6 +17,7 @@ title: Home
         </div>
     </div>
     <div class="row mb-5">
+    <a name="projects"></a>
     {% assign projects = site.projects | sort: 'priority' %}
     {% for project in projects %}
         <div class="col-md-4">

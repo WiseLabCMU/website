@@ -10,8 +10,11 @@
         </div>
         <div class="collapse navbar-collapse flex-grow-1 text-right" id="navbarNav">
             <ul class="navbar-nav ml-auto flex-nowrap">
+                <li class="nav-item d-md-none {% if page.url == '/' %}active{% endif %}">
+                    <a class="nav-link" href="/#projects">Projects </a>
+                </li>                
                 <li class="nav-item {% if page.url == '/publications.html' %}active{% endif %}">
-                    <a class="nav-link" href="/publications.html">Publications <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="/publications.html">Publications </a>
                 </li>
                 <li class="nav-item {% if page.url == '/about.html' %}active{% endif %}">
                     <a class="nav-link" href="/about.html">About</a>
@@ -23,6 +26,6 @@
         </div>
     </nav>
 </div>
-<div class="container" id="header-logo">
-    <a href="/"><img alt="WiSE Logo" src="/img/wise-logo-color.png"/></a>
+<div class="container {% if page.layout == 'project' %}d-none d-md-flex{% endif %}" id="header-logo">
+    <a href="/"><img alt="WiSE Logo" src="/img/wise_logo_color_hires.png" width="278" height="95"/></a>
 </div>

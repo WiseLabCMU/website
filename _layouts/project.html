@@ -9,7 +9,7 @@
 <div class="container">
     <div class="d-none d-md-flex mb-2 justify-content-between">
         <div>
-            Projects / {{ page.title }}
+            <a href="/#projects">All Projects</a> / {{ page.title }}
         </div>
         <div>
             {% assign count = 0 %}
@@ -29,10 +29,13 @@
         </div>
     </div>
     <div class="row pb-5">
-        <div class="col-md-8 project-image-large">
+        <div class="col-xl-8 col-lg-6 project-image-large">
             <img alt="{{ page.title }} image" src="{{page.image}}"/>
         </div>
-        <div class="col-md-4 pt-4">
+        <div class="col-md-12 d-md-none mt-3">
+            <a href="/#projects">Back to Projects</a>
+        </div>
+        <div class="col-xl-4 col-lg-6 pt-md-4 pt-2">
             <h2>{{ page.title }}</h2>
             {{ content }}
         </div>
