@@ -40,20 +40,22 @@ title: About
     </div>
     <h2>Team</h2>
     <div class="row team-list">
-        {% assign teamSorted = site.team |  sort: 'priority' %}
-        {% assign members = teamSorted |  sort: 'lastname' %}
-        {% for member in members %}
-        <div class="border-container">
-            <div class="team-item">
-                <img alt="{{ member.firstname }} {{ member.lastname }}" src="{{ member.image }}">
-                <strong>{{ member.firstname }} {{ member.lastname }}</strong><br/>
-                {{ member.title }},<br/>
-                {{ member.affiliation }}<br/>
-                {% if member.website %}
-                    <a href="{{ member.website }}" target="blank">Website</a>
-                {% endif %}
+        {% assign memberPriorities = site.team |  group_by: 'priority' | sort: 'name' %}
+        {% for priority in memberPriorities %}
+            {% assign members = priority.items | sort: 'lastname' %}
+            {% for member in members %}
+            <div class="border-container">
+                <div class="team-item">
+                    <img alt="{{ member.firstname }} {{ member.lastname }}" src="{{ member.image }}">
+                    <strong>{{ member.firstname }} {{ member.lastname }}</strong><br/>
+                    {{ member.title }},<br/>
+                    {{ member.affiliation }}<br/>
+                    {% if member.website %}
+                        <a href="{{ member.website }}" target="blank">Website</a>
+                    {% endif %}
+                </div>
             </div>
-        </div>
+            {% endfor %}
         {% endfor %}
     </div>
 </div>
