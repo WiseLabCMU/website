@@ -7,8 +7,15 @@ with `jekyll serve` at http://localhost:4000
 
 ## Making Updates
 Modify content pages and push commit. Changes to `master` branch will automatically
-be deployed to the live server unless a `skip` keyword is included in commit message, e.g. 
-`[skip travis] Update README`
+be deployed to the live server (in about 60s) unless a `skip` keyword is included in
+commit message, e.g. 
+
+```
+Update README
+
+[skip ci] 
+```
+
 ### Projects
 Add projects to the `_projects` directory.
 
