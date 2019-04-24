@@ -1,6 +1,6 @@
 ---
 layout: project
-title:  "Active Acoustic Sensing"
+title:  "Acoustic People Sensing"
 image: "/img/projects/acoustic.jpg"
 priority: 5
 ---
