@@ -46,7 +46,11 @@ title: About
             {% for member in members %}
             <div class="border-container">
                 <div class="team-item">
+                    {% if member.image and member.image != "" %}
                     <img alt="{{ member.firstname }} {{ member.lastname }}" src="{{ member.image }}">
+                    {% else %}
+                    <img alt="{{ member.firstname }} {{ member.lastname }}" src="/img/team/anon.png">
+                    {% endif %}
                     <strong>{{ member.firstname }} {{ member.lastname }}</strong><br/>
                     {{ member.title }},<br/>
                     {{ member.affiliation }}<br/>
