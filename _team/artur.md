@@ -1,7 +1,7 @@
 ---
 firstname: "Artur"
 lastname: "Balanuta"
-priority: 3 
+priority: 4 
 title: "PhD Candidate"
 affiliation: "Electrical and Computer Engineering Department"
 website: "https://artur.balanuta.com/"
