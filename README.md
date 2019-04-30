@@ -51,3 +51,6 @@ Add/update BibTeX file as `/_pubs/wise.bib`
 Supports following custom fields:
 - `pdf`: URL to PDF file
 - `award`: Award mention, outputs as red text towards end of entry
+
+**NOTE:**
+Tilde characters (~) in the `pdf` field must be escaped by `\%7E`
