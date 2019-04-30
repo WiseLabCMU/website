@@ -1,0 +1,9 @@
+---
+---
+{{ reference }}
+{% if entry.pdf %}
+  <a href="{{ entry.pdf }}" target="_blank">(PDF)</a>
+{% endif %}
+{% if entry.award %}
+<span class="award">{{ entry.award }}</span>
+{% endif %}

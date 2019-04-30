@@ -24,6 +24,16 @@ markdown: kramdown
 highlighter: rouge
 # theme: minima
 plugins:
+  - 'jekyll/scholar'
+
+scholar:
+    source: ./_pubs
+    bibliography: wise.bib
+    group_by: year
+    group_order: descending
+    bibliography_template: bib
+    details_layout: bibdetail.html
+    details_link: BibTeX
 
 sass:
   sass_dir: css
