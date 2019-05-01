@@ -49,8 +49,9 @@ Team member display is sorted first by priority, then by last name.
 Add/update BibTeX file as `/_pubs/wise.bib`
 
 Supports following custom fields:
-- `pdf`: URL to PDF file
+- `link`: URL to external ref, replaces `url` field. Displayed as hyperlink [(Link)](#)
+- `pdf`: URL to PDF file. Displayed as hyperlink [(PDF)](#)
 - `award`: Award mention, outputs as red text towards end of entry
 
 **NOTE:**
-Tilde characters (~) in the `pdf` field must be escaped by `\%7E`
+Tilde characters (~) in the `pdf` or `link` field must be escaped by `\%7E`
