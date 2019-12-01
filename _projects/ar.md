@@ -1,6 +1,6 @@
 ---
 layout: project
-title:  "Persistent and Collaborative Augmented Reality"
+title:  "Persistent and Collaborative Mixed Reality"
 image: "/img/projects/ar.jpg"
 priority: 1
 ---
