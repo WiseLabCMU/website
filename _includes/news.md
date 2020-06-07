@@ -1,4 +1,11 @@
 ## Latest News
+*  **May 5, 2020**: <br/> Congrats to Akarsh, Vaibhav and Artur on two new MobiSys papers. 
+*  **Jun 19, 2020**: <br/> Congrats to Akshay on winning IPSN best paper! 
+*  **Mar 20, 2020**: <br/> Congrats to Rahul, Adwait, John, Akshay and Nick for two new IPSN papers. 
+*  **Oct 20, 2019**: <br/> Congrats to Elahe for winning the EECS Rising Stars workshop Research Pitch Competition! 
+*  **Sep 26, 2019**: <br/> Congrats to Niranjini, John, Krishna and Anh for Best Paper Runner up at IPIN on some early AR work 
+*  **Aug 22, 2019**: <br/> Congrats to Team Explorer for winning the first round of the DARPA SubT challenge!  
+*  **Jun 20, 2019**: <br/> New NSDI paper on LP-WAN 
 *  **Apr 15, 2019**: <br/> Two new CPS Week papers at IPSN and ICCPS.
 *  **Mar 28, 2018**: <br/> Congrats to  Hsu-Chieh for defending!
 *  **Aug 31, 2018**: <br/> Congrats to Max for defending!
