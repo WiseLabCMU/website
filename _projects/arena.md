@@ -9,3 +9,5 @@ Many have predicted the future of the Web to be the integration of Web content w
 Building pervasive mixed reality applications is challenging for several reasons, such as: (i) applications require global instant-on localization; (ii) ideally, multiple users should interact with the content; (iii) tight latency requirements; (iv) diversity of compute and interaction capabilities.
 
 The ARENA addresses the challenges of building collaborative mixed reality applications. It is a a network-transparent runtime system that uses web-based technologies to host multiple independent applications that can be accessed simultaneously by multiple users. 
+
+The ARENA is being developed within the [CONIX Research Center](https://conix.io/)  
