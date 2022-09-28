@@ -4,5 +4,6 @@ lastname: "Choi"
 priority: 2
 title: "Research Programmer"
 affiliation: "Electrical and Computer Engineering Department"
-image: ""
+website: "https://johnchoi313.weebly.com/"
+image: "/img/team/johnchoi.jpg"
 ---
