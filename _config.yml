@@ -51,6 +51,8 @@ collections:
     output: true
   team:
     output: false
+  alumni:
+    output: false
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

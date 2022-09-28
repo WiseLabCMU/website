@@ -30,10 +30,10 @@ title: About
                <li class="col-lg-2 col-md-3 col-sm-4 col-6"><img alt="Texas Instruments Logo" src="/img/sponsors/ti.png"></li>
            </ul>
            <p><strong>Like our research? Consider becoming a lab sponsor!</strong><br/>
-           Corporate collaborators have unique access to Wireless Sensing and Embedded Systembs Lab researchers and 
-           research, including early previews of new technologies, sponsor-exclusive workshops and demo days. There 
-           are also opportunities to fund particular research themes and projects in the lab, which can include rights 
-           to resulting intellectual property. Please contact Professor Rowe for more information. Email us with more 
+           Corporate collaborators have unique access to Wireless Sensing and Embedded Systembs Lab researchers and
+           research, including early previews of new technologies, sponsor-exclusive workshops and demo days. There
+           are also opportunities to fund particular research themes and projects in the lab, which can include rights
+           to resulting intellectual property. Please contact Professor Rowe for more information. Email us with more
            information.
            </p>
         </div>
@@ -41,6 +41,30 @@ title: About
     <h2>Team</h2>
     <div class="row team-list">
         {% assign memberPriorities = site.team |  group_by: 'priority' | sort: 'name' %}
+        {% for priority in memberPriorities %}
+            {% assign members = priority.items | sort: 'lastname' %}
+            {% for member in members %}
+            <div class="border-container">
+                <div class="team-item">
+                    {% if member.image and member.image != "" %}
+                    <img alt="{{ member.firstname }} {{ member.lastname }}" src="{{ member.image }}">
+                    {% else %}
+                    <img alt="{{ member.firstname }} {{ member.lastname }}" src="/img/team/anon.png">
+                    {% endif %}
+                    <strong>{{ member.firstname }} {{ member.lastname }}</strong><br/>
+                    {{ member.title }},<br/>
+                    {{ member.affiliation }}<br/>
+                    {% if member.website %}
+                        <a href="{{ member.website }}" target="blank">Website</a>
+                    {% endif %}
+                </div>
+            </div>
+            {% endfor %}
+        {% endfor %}
+    </div>
+    <h2>Alumni</h2>
+    <div class="row team-list">
+        {% assign memberPriorities = site.alumni |  group_by: 'priority' | sort: 'name' %}
         {% for priority in memberPriorities %}
             {% assign members = priority.items | sort: 'lastname' %}
             {% for member in members %}
