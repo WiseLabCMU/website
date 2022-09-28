@@ -1,0 +1,9 @@
+---
+firstname: "Edward"
+lastname: "Lu"
+priority: 4
+title: "PhD Candidate"
+affiliation: "Electrical and Computer Engineering Department"
+website: "https://users.ece.cmu.edu/~elu2/"
+image: "/img/team/elu2.jpg"
+---
