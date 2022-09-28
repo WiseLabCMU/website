@@ -10,8 +10,9 @@ title: Home
                 Engineering Department at Carnegie Mellon University that focuses on the platforms, protocols and
                 processing techniques that support networked embedded systems. We are interested in a broad range of
                 topics including: operating system design, wireless networking, sensing technologies, real-time
-                scheduling, time synchronization and localization. We apply our work to applications such as building
-                energy management, micro-grid management, critical infrastructure monitoring, large-scale environmental
+                scheduling, time synchronization and localization. We apply our work to applications such as
+                augmented, virtual and mixed reality, distributed edge computing systems, building energy
+                management, micro-grid management, critical infrastructure monitoring, large-scale environmental
                 sensing and mobile computing.
             </p>
         </div>
