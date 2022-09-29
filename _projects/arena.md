@@ -1,6 +1,6 @@
 ---
 layout: project
-title:  "The Augmented Reality Edge Networking Architecture (ARENA)"
+title:  "ARENA: The Augmented Reality Edge Networking Architecture"
 image: "/img/projects/arena-arch-3.png"
 priority: 1
 ---

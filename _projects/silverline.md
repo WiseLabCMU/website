@@ -1,6 +1,6 @@
 ---
 layout: project
-title:  "Distributed Runtime for WebAssembly (Silverline)"
+title:  "Silverline: Distributed Runtime for WebAssembly"
 image: "/img/projects/silverline.png"
 priority: 1
 ---
