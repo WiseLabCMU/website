@@ -18,6 +18,9 @@ Update README
 [skip ci] 
 ```
 
+### News
+The news list is a simple [markdown block](_includes/news.md).
+
 ### Projects
 Add projects to the `_projects` directory.
 
@@ -31,7 +34,7 @@ The body is markdown-enabled description of the project.
 Images should be 3:2 ratio, ideally 510px * 340px.
 
 ### Team Members
-Add team members to the `_team` directory.
+Add team members to the `_team` directory. Move similarly formated entries into the `_alumni` directory as applicable.
 
 Specify the following metatags in header:
 * `firstname:` [firstname]
