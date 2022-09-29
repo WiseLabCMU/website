@@ -1,8 +1,8 @@
 ---
 layout: project
-title:  "Detecting Hidden IoT Devices in an AirBnBs and Hotels"
+title:  "Lumos: Detecting Hidden IoT Devices in an AirBnBs and Hotels"
 image: "/img/projects/lumos.png"
-priority: 2
+priority: 1
 ---
 
 Hidden IoT devices are increasingly being used to snoop
