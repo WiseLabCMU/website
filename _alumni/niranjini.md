@@ -1,9 +1,9 @@
 ---
 firstname: "Niranjini"
 lastname: "Rajagopal"
-priority: 4 
+priority: 4
 title: "PhD Candidate"
 affiliation: "Now at Amazon"
-website: "https://http://www.niranjini.com/"
+website: "https://www.niranjini.com/"
 image: ""
 ---
