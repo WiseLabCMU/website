@@ -1,7 +1,7 @@
 ---
 firstname: "Ivan"
 lastname: "Liang"
-priority: 2
+priority: 3
 title: "Research Programmer"
 affiliation: "CyLab"
 image: ""

@@ -1,9 +1,9 @@
 ---
 firstname: "Elahé"
 lastname: "Soltanaghai"
-priority: 3
+priority: 5
 title: "Postdoctoral Researcher"
 affiliation: "Now Professor at UIUC"
 website: "https://elahe.web.illinois.edu/"
-image: ""
+image: "/img/team/elahe.jpg"
 ---

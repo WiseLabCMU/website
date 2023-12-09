@@ -1,4 +1,5 @@
 ## Latest News
+*  **Nov 17, 2023**: <br/>Congrats to Rahul for defending!
 *  **Aug 5, 2022**: <br/>Congrats to Artur for defending!
 *  **Oct 25, 2021**: <br/>Bosch invests $3 million for collaboration in spatial computing research!
 *  **Oct 8, 2021**: <br/>ARENA gets best paper runner up at ISMAR.

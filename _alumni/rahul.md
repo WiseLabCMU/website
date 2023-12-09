@@ -1,9 +1,9 @@
 ---
 firstname: "Rahul"
 lastname: " Anand Sharma"
-priority: 4 
+priority: 2
 title: "PhD Candidate (co-advised with Vyas Sekar)"
-affiliation: "Electrical and Computer Engineering Department & CyLab"
+affiliation: "Now at Amazon"
 website: "https://rahul-anand.github.io/"
 image: "/img/team/rahul.jpg"
 ---

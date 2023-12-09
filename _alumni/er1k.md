@@ -1,7 +1,7 @@
 ---
 firstname: "Eric"
 lastname: "Riebling"
-priority: 2
+priority: 6
 title: "Senior Research Programmer"
 affiliation: "Electrical and Computer Engineering Department"
 website: "http://ericriebling.com"
