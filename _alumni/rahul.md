@@ -1,7 +1,7 @@
 ---
 firstname: "Rahul"
 lastname: " Anand Sharma"
-priority: 2
+priority: 3
 title: "PhD Candidate (co-advised with Vyas Sekar)"
 affiliation: "Now at Amazon"
 website: "https://rahul-anand.github.io/"
