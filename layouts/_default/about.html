@@ -1,0 +1,82 @@
+{{ define "main" }}
+{{ $team := sort (sort hugo.Data.team "lastname") "priority" }}
+{{ $alumni := sort (sort hugo.Data.alumni "lastname") "priority" }}
+<div class="container">
+    <div class="row mb-4">
+        <div class="col">
+            <p>
+                Wireless Sensing and Embedded Systems Lab is a systems research group in the Electrical and Computer
+                Engineering Department at Carnegie Mellon University that focuses on the platforms, protocols and
+                processing techniques that support networked embedded systems. We are interested in a broad range of
+                topics including: operating system design, wireless networking, sensing technologies, real-time
+                scheduling, time synchronization and localization. We apply our work to applications such as
+                augmented, virtual and mixed reality, distributed edge computing systems, building energy
+                management, micro-grid management, critical infrastructure monitoring, large-scale environmental
+                sensing and mobile computing.
+             </p>
+        </div>
+    </div>
+    <div class="row mb-4">
+        <div class="col">
+           <h2>Sponsors</h2>
+           <ul class="sponsor-list row list-unstyled">
+               <li class="col-lg-2 col-md-3 col-sm-4 col-6"><img alt="Bosch Logo" src="/img/sponsors/bosch.png"></li>
+               <li class="col-lg-2 col-md-3 col-sm-4 col-6"><img alt="NIST Logo" src="/img/sponsors/nist.png"></li>
+               <li class="col-lg-2 col-md-3 col-sm-4 col-6"><img alt="NSF Logo" src="/img/sponsors/nsf.png"></li>
+               <li class="col-lg-2 col-md-3 col-sm-4 col-6"><img alt="SRC Logo" src="/img/sponsors/src.png"></li>
+               <li class="col-lg-2 col-md-3 col-sm-4 col-6"><img alt="DOE Logo" src="/img/sponsors/doe.png"></li>
+               <li class="col-lg-2 col-md-3 col-sm-4 col-6"><img alt="ARPA-E Logo" src="/img/sponsors/arpa-e.png"></li>
+               <li class="col-lg-2 col-md-3 col-sm-4 col-6"><img alt="Bridgestone Logo" src="/img/sponsors/bridgestone.png"></li>
+               <li class="col-lg-2 col-md-3 col-sm-4 col-6"><img alt="Texas Instruments Logo" src="/img/sponsors/ti.png"></li>
+           </ul>
+           <p><strong>Like our research? Consider becoming a lab sponsor!</strong><br/>
+           Corporate collaborators have unique access to Wireless Sensing and Embedded Systembs Lab researchers and
+           research, including early previews of new technologies, sponsor-exclusive workshops and demo days. There
+           are also opportunities to fund particular research themes and projects in the lab, which can include rights
+           to resulting intellectual property. Please contact Professor Rowe for more information. Email us with more
+           information.
+           </p>
+        </div>
+    </div>
+    <h2>Team</h2>
+    <div class="row team-list">
+        {{ range $team }}
+            <div class="border-container">
+                <div class="team-item">
+                    {{ if .image }}
+                    <img alt="{{ .firstname }} {{ .lastname }}" src="{{ .image }}">
+                    {{ else }}
+                    <img alt="{{ .firstname }} {{ .lastname }}" src="/img/team/anon.png">
+                    {{ end }}
+                    <strong>{{ .firstname }} {{ .lastname }}</strong><br/>
+                    {{ .title }},<br/>
+                    {{ .affiliation }}<br/>
+                    {{ if isset . "website" }}
+                        <a href="{{ .website }}" target="blank">Website</a>
+                    {{ end }}
+                </div>
+            </div>
+        {{ end }}
+    </div>
+    <h2>Alumni</h2>
+    <div class="row team-list">
+        {{ range $alumni }}
+            <div class="border-container">
+                <div class="team-item">
+                    {{ if .image }}
+                    <img alt="{{ .firstname }} {{ .lastname }}" src="{{ .image }}">
+                    {{ else }}
+                    <img alt="{{ .firstname }} {{ .lastname }}" src="/img/team/anon.png">
+                    {{ end }}
+                    <strong>{{ .firstname }} {{ .lastname }}</strong><br/>
+                    {{ .title }},<br/>
+                    {{ .affiliation }}<br/>
+                    {{ if isset . "website" }}
+                        <a href="{{ .website }}" target="blank">Website</a>
+                    {{ end }}
+                </div>
+            </div>
+        {{ end }}
+    </div>
+</div>
+{{ end }}

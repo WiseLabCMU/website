@@ -1,7 +1,20 @@
-_site
-.sass-cache
-.jekyll-metadata
-Gemfile.lock
-vendor
+# Hugo build output
+/public/
+/resources/
+.hugo_build.lock
+hugo_stats.json
+
+# Publications — generated from _pubs/wise.bib by the deploy workflow (scripts/gen_bib.py)
+/data/publications.json
+/static/bibliography/
+
+# Jekyll reference build (kept locally for comparison; not deployed)
+_site/
+
+# Python virtualenvs for the bibliography generator
+.venv/
+.bibvenv/
+__pycache__/
+
+# OS / editor
 .DS_Store
-.jekyll-cache/

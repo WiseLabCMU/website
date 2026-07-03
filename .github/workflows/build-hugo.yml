@@ -1,0 +1,35 @@
+name: Build and deploy Hugo site
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build-hugo-deploy-remote:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+      # Hugo has no BibTeX engine, so regenerate the publications data + BibTeX
+      # detail pages from _pubs/wise.bib before building (replaces jekyll-scholar).
+      - name: Generate publications from BibTeX
+        run: |
+          python3 -m venv .bibvenv
+          .bibvenv/bin/pip install --quiet -r scripts/requirements.txt
+          .bibvenv/bin/python scripts/gen_bib.py
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@2752ce1d29631191ea3f27c23495fa06139a5b78 # v3.2.1
+        with:
+          hugo-version: '0.163.3'
+          extended: true
+      - name: Build
+        run: hugo --minify
+      - name: rsync to remote server
+        uses: burnett01/rsync-deployments@4d419d1dc46d4a8a2b6ceab2f951f0f93b2da8f5 # v9.0.0
+        with:
+          switches: -vazh
+          path: public/*
+          remote_path: ${{ secrets.DEPLOY_PATH }}
+          remote_host: ${{ secrets.DEPLOY_HOST }}
+          remote_user: ${{ secrets.DEPLOY_USER }}
+          remote_key: ${{ secrets.DEPLOY_SSH_KEY }}

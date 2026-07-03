@@ -1,0 +1,17 @@
+baseURL = "https://wise.ece.cmu.edu/"
+title = "WiSE Lab"
+uglyURLs = true
+disableHugoGeneratorInject = true
+
+# Jekyll (without jekyll-sitemap/feed) produced no sitemap.xml, RSS, robots.txt, or
+# section list pages, so disable those kinds to match the reference output.
+disableKinds = ["taxonomy", "term", "RSS", "sitemap", "robotsTXT", "section"]
+
+[params]
+  email = "wiselabCMU@gmail.com"
+  description = "WiSE Lab is a systems research group in the Electrical and Computer Engineering Department at Carnegie Mellon University that focuses on the platforms, protocols and processing techniques that support networked embedded systems."
+
+[markup]
+  [markup.goldmark.renderer]
+    # project descriptions and the news block contain raw HTML (<br/>, <a>)
+    unsafe = true

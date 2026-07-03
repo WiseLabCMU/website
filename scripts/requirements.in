@@ -1,0 +1,4 @@
+# Dependencies for scripts/gen_bib.py (BibTeX -> publications HTML).
+# Pinned so CI and local runs produce identical citation output.
+citeproc-py==0.9.3
+bibtexparser==1.4.4

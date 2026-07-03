@@ -1,0 +1,65 @@
+{{ define "main" }}
+{{ $projects := sort (sort (where .Site.RegularPages "Type" "projects") "File.ContentBaseName") "Params.priority" }}
+{{ $n := len $projects }}
+{{ $cur := 0 }}
+{{ range $i, $p := $projects }}{{ if eq $p.RelPermalink $.RelPermalink }}{{ $cur = $i }}{{ end }}{{ end }}
+{{ $prev := index $projects (mod (add (add $cur -1) $n) $n) }}
+{{ $next := index $projects (mod (add $cur 1) $n) }}
+<div class="container">
+    <div class="d-none d-md-flex mb-2 justify-content-between">
+        <div>
+            <a href="/#projects">All Projects</a> / {{ .Title }}
+        </div>
+        <div>
+            <a href="{{ $prev.RelPermalink }}">Previous</a>  / <a href="{{ $next.RelPermalink }}">Next</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="blue-border"></div>
+        </div>
+    </div>
+    <div class="row pb-5">
+        <div class="col-xl-8 col-lg-6 project-image-large">
+            <img alt="{{ .Title }} image" src="{{ .Params.image }}"/>
+        </div>
+        <div class="col-md-12 d-md-none mt-3">
+            <a href="/#projects">Back to Projects</a>
+        </div>
+        <div class="col-xl-4 col-lg-6 pt-md-4 pt-2">
+            <h2>{{ .Title }}</h2>
+            {{ .Content }}
+        </div>
+    </div>
+    <div class="row my-5 d-none d-md-flex">
+        {{ range $projects }}
+            {{ if ne .RelPermalink $.RelPermalink }}
+            <div class="col-md-4">
+                <div class="project-item boxed">
+                    <a href="{{ .RelPermalink }}">
+                        <img alt="{{ .Title }} image" src="{{ .Params.image }}"/>
+                        <div class="project-title">
+                            {{ .Title }}
+                        </div>
+                    </a>
+                </div>
+            </div>
+            {{ end }}
+        {{ end }}
+    </div>
+    <div class="row d-none d-md-block">
+        <div class="col" id="news-container">
+        {{ partial "news.html" . }}
+        </div>
+    </div>
+    <div class="d-md-none d-flex justify-content-between font-weight-bold">
+        <div>
+            <a href="{{ $prev.RelPermalink }}">&larr; Previous</a>
+        </div>
+        <div>
+            <a href="{{ $next.RelPermalink }}">Next &rarr;</a>
+        </div>
+
+    </div>
+</div>
+{{ end }}

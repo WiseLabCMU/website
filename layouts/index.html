@@ -1,0 +1,38 @@
+{{ define "main" }}
+{{ $projects := sort (sort (where .Site.RegularPages "Type" "projects") "File.ContentBaseName") "Params.priority" }}
+<div class="container">
+    <div class="row  mb-4">
+        <div class="col">
+            <p>
+                Wireless Sensing and Embedded Systems Lab is a systems research group in the Electrical and Computer
+                Engineering Department at Carnegie Mellon University that focuses on the platforms, protocols and
+                processing techniques that support networked embedded systems. We are interested in a broad range of
+                topics including: operating system design, wireless networking, sensing technologies, real-time
+                scheduling, time synchronization and localization. We apply our work to applications such as
+                augmented, virtual and mixed reality, distributed edge computing systems, building energy
+                management, micro-grid management, critical infrastructure monitoring, large-scale environmental
+                sensing and mobile computing.
+            </p>
+        </div>
+    </div>
+    <div class="row mb-5">
+    <a name="projects"></a>
+    {{ range $projects }}
+        <div class="col-md-4">
+            <div class="project-item boxed">
+                <a href="{{ .RelPermalink }}">
+                    <img alt="{{ .Title }} image" src="{{ .Params.image }}"/>
+                    <div class="project-title">
+                        {{ .Title }}
+                    </div>
+                </a>
+            </div>
+        </div>
+    {{ end }}
+    </div>
+    <div class="row">
+        <div class="col" id="news-container">{{ partial "news.html" . }}
+</div>
+    </div>
+</div>
+{{ end }}
