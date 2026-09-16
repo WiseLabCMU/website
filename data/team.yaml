@@ -54,10 +54,10 @@
 - firstname: "Sruti"
   lastname: "Srinidhi"
   priority: 8
-  title: "PhD Student"
+  title: "PhD Candidate"
   affiliation: "Electrical and Computer Engineering Department"
-  website: ""
-  image: ""
+  website: "https://www.srutisrinidhi.com/"
+  image: "/img/team/sruti.png"
 - firstname: "Tao"
   lastname: "Jin"
   priority: 7
