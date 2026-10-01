@@ -79,3 +79,10 @@
   affiliation: "Electrical and Computer Engineering Department"
   website: "https://thetianshuhuang.github.io/"
   image: "/img/team/tianshu.jpg"
+- firstname: "Jihwan"
+  lastname: "Kim"
+  priority: 9
+  title: "PhD Student"
+  affiliation: "Electrical and Computer Engineering Department"
+  website: "https://esmjihwankim.github.io/"
+  image: "/img/team/jihwan.jpeg"
